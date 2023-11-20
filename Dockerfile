@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # Replace with current runner version (@see https://github.com/actions/runner/releases)
 ARG RUNNER_VERSION="2.311.0"
