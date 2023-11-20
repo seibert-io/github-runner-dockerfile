@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 # Replace with current runner version (@see https://github.com/actions/runner/releases)
-ARG RUNNER_VERSION="2.294.0"
+ARG RUNNER_VERSION="2.311.0"
 
 # Prevents installdependencies.sh from prompting the user and blocking the image creation
 ARG DEBIAN_FRONTEND=noninteractive
