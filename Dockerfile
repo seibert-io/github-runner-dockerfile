@@ -6,7 +6,7 @@ ARG RUNNER_VERSION="2.311.0"
 # Prevents installdependencies.sh from prompting the user and blocking the image creation
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt update -y && apt upgrade -y && useradd -m runner
+RUN apt update -y && apt upgrade -y && groupadd -g 116 docker && useradd -G docker -m runner
 RUN apt install -y --no-install-recommends \
     curl jq build-essential libssl-dev libffi-dev python3 python3-venv python3-dev python3-pip
 RUN apt-get install -y ca-certificates gnupg && \
