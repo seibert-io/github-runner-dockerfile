@@ -20,7 +20,7 @@ cd /home/docker/actions-runner
 
 cleanup() {
     echo "Removing runner..."
-    ./config.sh remove --unattended --token ${REGISTRATION_TOKEN}
+    ./config.sh --unattended --token ${REGISTRATION_TOKEN} remove
 }
 
 trap 'cleanup; exit 130' INT
