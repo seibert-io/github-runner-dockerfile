@@ -3,6 +3,7 @@
 #$REPOSITORY
 #$ACCESS_TOKEN
 #$REGISTRATION_TOKEN
+#$LABELS
 
 if [ -z ${REGISTRATION_TOKEN+x} ]; then 
     echo "Fetching REGISTRATION_TOKEN from Github..."; 
@@ -15,7 +16,7 @@ fi
 
 cd /home/docker/actions-runner
 
-./config.sh --url https://github.com/${REPOSITORY} --token ${REGISTRATION_TOKEN}
+./config.sh --unattended --url https://github.com/${REPOSITORY} --token ${REGISTRATION_TOKEN} --labels ${LABELS:-default}
 
 cleanup() {
     echo "Removing runner..."
