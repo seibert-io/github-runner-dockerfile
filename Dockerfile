@@ -28,7 +28,7 @@ RUN cd /home/runner && mkdir actions-runner && cd actions-runner \
 
 RUN chown -R runner ~runner && /home/runner/actions-runner/bin/installdependencies.sh
 
-RUN groupadd docker && usermod -aG docker runner
+RUN usermod -aG docker runner
 
 COPY start.sh start.sh
 
