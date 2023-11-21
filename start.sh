@@ -14,7 +14,7 @@ else
 fi
 
 
-cd /home/docker/actions-runner
+cd /home/runner/actions-runner
 
 ./config.sh --unattended --url https://github.com/${REPOSITORY} --token ${REGISTRATION_TOKEN} --labels ${LABELS:-default}
 
